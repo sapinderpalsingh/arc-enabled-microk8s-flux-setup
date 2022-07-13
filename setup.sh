@@ -108,13 +108,6 @@ fi
 printf "\n Connecting to Azure Arc 🚧 \n"
 az connectedk8s connect --name $SITE_NAME --resource-group $AZ_ARC_RESOURCEGROUP
 
-printf "\n Creating k8s-extension 🚧 \n"
-az k8s-extension create --cluster-name $SITE_NAME --resource-group $AZ_ARC_RESOURCEGROUP --cluster-type connectedClusters --extension-type Microsoft.AzureKeyVaultSecretsProvider --name $SECRET_PROVIDER_NAME
-
-printf "\n Verifying k8s-extension 🚧 \n"
-az k8s-extension show --cluster-type connectedClusters --cluster-name $SITE_NAME --resource-group $AZ_ARC_RESOURCEGROUP --name $SECRET_PROVIDER_NAME
-
-
 # Generate token to connect to Azure k8s cluster
 ADMIN_USER=$(kubectl get serviceaccount admin-user -o jsonpath='{$.metadata.name}' --ignore-not-found)
 if [ -z "$ADMIN_USER" ]; then
