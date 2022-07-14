@@ -143,5 +143,4 @@ printf $TOKEN
 printf "\n ####### Token to connect to Azure ARC ends here   ######### \n"
 echo $TOKEN > token.txt
 printf "\n Token is saved at token.txt file \n"
-printf "\n Creating Kubernetes Secrets for Key Valut 🚧 \n"
 
