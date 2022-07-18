@@ -26,4 +26,4 @@ There is `script.sh` file which reads `.env` file for configurations and then pr
 
 
 
-For more details refer to [this blog post]().
+For more details refer to [this blog post](https://sapinder.medium.com/automating-arc-enabled-microk8s-with-flux-setup-on-ubuntu-edge-devices-91c364228a3).
